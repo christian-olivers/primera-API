@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.container {
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.random-container {
+    background-color: darkolivegreen;
+    margin-top: 50px;
+    border-radius: 30px;
+}
+.container-cards {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.container-input {
+    text-align: center;
+    background: #282828;
+    border-top: 5px solid #c39f77;
+    padding: 50px 0;
+    border-radius: 6px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.label-svg {
+    max-width: 80%;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+}
+.label-svg figure {
+    width: 110px;
+    height: 30px;
+    border-top-left-radius: 40px 40px;
+    border-top-right-radius: 40px 40px;
+    background: linear-gradient(145deg, #4d602a, #5b7232);
+    box-shadow:  9px 9px 25px #33401c, -4px -4px 25px #779642;
+    display: block;
+    position: relative;
+    padding: 5px;
+    margin: 0 auto;
+}
+.label-svg:hover figure {
+    background: #9dc458; 
+}
+.label-svg svg {
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+}
+#img-view {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+}
+.btn-update {
+    width: 110px;
+    height: 30px;
+    border-bottom-left-radius: 40px 40px;
+    border-bottom-right-radius: 40px 40px;
+    opacity: 1;
+    background: linear-gradient(145deg, #9dc458, #add36b);
+    box-shadow:  9px 9px 25px #33401c, -4px -4px 25px #779642;
+    color: rgb(55, 75, 22);
+    font-weight: bold;
+    border:none;
+    margin-top: -5px;
+}
+
+
+.btn-another {
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 41px;
+    background: linear-gradient(145deg, #4d602a, #5b7232);
+    box-shadow:  9px 9px 25px #33401c, -9px -9px 25px #779642;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    
+}
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 35px;
+    place-content: center;
+    margin: 2em 0 0 0;
+    
+    border-radius: 30px;
+}
+#cards article {
+    width: 190px;
+    height: 180px;
+    background-color: goldenrod;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow:  9px 9px 25px #33401c, -9px -9px 25px #779642;
+}
+#cards article img {
+    width: 180px;
+    height: 178px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#cards article .title-image {
+    width: 160px;
+    height: 30px;
+    position: absolute;
+    background-color:  coral;
+    transform: translateX(calc(100% - 145px));
+    margin-top: -205px;
+    border-radius: 10px;
+
+}
+#cards article .circle-start{
+    background-color: #ffffff;
+    width: 30px;
+    height: 30px;
+    margin-top: -50px;
+    position: absolute;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+#cards article  .start {
+    background-color: #5c5959;
+    -webkit-mask-image: url('./assets/3844428-famous-favorite-featured-star-super_110301.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+#cards article .start-active {
+    background-color: rgb(240, 240, 31);
+}
+#favorites-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 35px;
+    place-content: center;
+    margin: 2em 0 0 0;
+    background-color: darkolivegreen;
+    border-radius: 30px;
+    padding-top: 20px;
+}
+#favorites-container article {
+    width: 190px;
+    height: 180px;
+    background-color: goldenrod;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow:  9px 9px 25px #33401c, -9px -9px 25px #779642;
+}
+#favorites-container article img {
+    width: 180px;
+    height: 178px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#favorites-container article .circle-start{
+    background-color: #9b9b9b;
+    width: 30px;
+    height: 30px;
+    margin-top: -50px;
+    position: absolute;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+#favorites-container article  .start {
+    background-color: yellow;
+    -webkit-mask-image: url('./assets/3844428-famous-favorite-featured-star-super_110301.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+#upload-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 35px;
+    place-content: center;
+    margin: 2em 0 0 0;
+    background-color: darkolivegreen;
+    border-radius: 30px;
+    padding-top: 20px;
+}
+#upload-container article {
+    width: 190px;
+    height: 180px;
+    background-color: goldenrod;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow:  9px 9px 25px #33401c, -9px -9px 25px #779642;
+}
+#upload-container article img {
+    width: 180px;
+    height: 178px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.get-img-upload {
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: rgb(110, 7, 110);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+@media (max-width: 640px) {
+    .container {
+        height: 100%;
+    }
+    .container-cards {
+        width: 90%;
+        min-width: 300px;
+        background-color: darkolivegreen;
+        margin: 0 auto;
+    }
+    #cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 120px);
+        gap: 15px;
+        place-content: center;
+        margin: 5em 0 0 0;
+    }
+    #cards article {
+        max-width: 120px;
+        max-height: 130px;
+        background-color: goldenrod;
+    }
+    #cards article img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+    #favorites-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 120px);
+        gap: 25px;
+        place-content: center;
+        margin: 5em 0 0 0;
+    }
+
+    #favorites-container article {
+        max-width: 120px;
+        max-height: 130px;
+        background-color: goldenrod;
+    }
+    #favorites-container article img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+    .cuadro2 {
+        width: 120px;
+        height: 130px;
+        background-color: goldenrod;
+    }
+}
+/* #cards {
+    display: flex;
+}
+#cards img {
+    width: 150px;
+    height: 130px;
+    margin: 5px;
+}
+#cards article {
+    width: 150px;
+    height: 130px;
+    margin: 5px;
+}
+#cards article .start-active {
+    background-color: yellow;
+}
+#cards article div {
+    background-color: #cacaca;
+    -webkit-mask-image: url('./assets/3844428-famous-favorite-featured-star-super_110301.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-top: -50px;
+    position: absolute;
+    margin-left: 1%;
+}
+#favorites-container {
+    display: grid;
+	grid-template-columns: repeat(auto-fill, 140px);
+	
+}
+#favorites-container img {
+    width: 150px;
+    height: 130px;
+    object-fit: cover;
+    margin: 5px;
+}
+
+.start-favorites {
+    background-color: yellow;
+    -webkit-mask-image: url('./assets/3844428-famous-favorite-featured-star-super_110301.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-top: 90px;
+    position: absolute;
+    margin-left: -150px;
+} */
